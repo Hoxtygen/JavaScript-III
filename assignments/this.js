@@ -2,8 +2,8 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. Default Binding
-    To understand the this binding, it is imperative to understand the call-site; the location in a code where a function is called. The call-site needs to be inspected to know what `this` is referring to.
+* 1. Default Binding/Window
+    To understand the this binding, it is imperative to understand the call-site; the location in a code where a function is called. The call-site needs to be inspected to know what `this` is referring to. When in the global scope, the value of “this” will be the window/console Object as it's the call site;
 
 
 
@@ -65,6 +65,11 @@ When a function is invoked with new in front of it, otherwise known as a constru
 // Principle 1
 
 // code example for Window Binding
+function sayName(name) {
+    console.log(this);
+    return name;
+  }
+  sayName("Maxime");
 
 // Principle 2
 
